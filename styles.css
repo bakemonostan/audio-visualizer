@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+}
+#audioInput,
+#startButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#startButton {
+  left: 200px;
+}
+
+#overlay2D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
