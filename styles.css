@@ -1,23 +1,52 @@
 body {
-  margin: 0;
-  overflow: hidden;
-}
-canvas {
-  display: block;
-}
-#audioInput,
-#startButton {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-#startButton {
-  left: 200px;
-}
-
-#overlay2D {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #overlay2D {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  #audioInput,
+  #startButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+  
+  #startButton {
+    left: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    #audioInput,
+    #startButton {
+      top: auto;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 300px;
+    }
+  
+    #startButton {
+      bottom: 70px;
+    }
+  }
